@@ -1,4 +1,6 @@
-require('dotenv').config(); // must be on top
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const express = require('express');
 const mongoose = require('mongoose');
